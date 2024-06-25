@@ -1,13 +1,13 @@
-public class Car {
-        public String modelName;
-        public int wheelsCount;
-
-        public void updateTyre() {
-            System.out.println("Меняем покрышку");
+public class Car extends Transport {
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+    @Override
+    public void doMaintenance () {
+        System.out.println("Обслуживаем: " + getModelName());
+        System.out.println("Меняем покрышку");
+        System.out.println("Проверяем двигатель");
         }
 
-        public void checkEngine() {
-            System.out.println("Проверяем двигатель");
-        }
 }
 
