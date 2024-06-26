@@ -1,13 +1,11 @@
 public abstract class Transport implements Service {
     private String modelName;
     private int wheelsCount;
-    Transport[] transports = new Transport[6];
 
 
     public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;
         this.wheelsCount = wheelsCount;
-        this.transports = transports;
     }
 
     public String getModelName() {
@@ -18,10 +16,6 @@ public abstract class Transport implements Service {
         return wheelsCount;
     }
 
-    public Transport[] getTransports() {
-        return transports;
-    }
-
     @Override
     public String toString() {
         return "Transport{" +
@@ -30,6 +24,15 @@ public abstract class Transport implements Service {
                 '}';
     }
 
-    public abstract void doMaintenance();
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
 
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
 }
