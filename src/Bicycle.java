@@ -8,9 +8,7 @@ public class Bicycle extends Transport {
             System.out.println("Обслуживаем: " + getModelName());
             updateTyre();
         }
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+
 }
 
 
